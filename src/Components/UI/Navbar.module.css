@@ -7,6 +7,11 @@
     width: 90%;
     height: 80px;
     border-radius: 13px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
 }
 
 .navbarLogo {
@@ -43,6 +48,11 @@
     transition: all 0.2s ease-in-out;
 }
 
+.menuIcon {
+    display: none;
+    cursor: pointer;
+}
+
 .signUp {
     display: none;
 }
@@ -61,4 +71,79 @@ button {
 button:hover {
     background-color: #151516;
     color: #fff;
+}
+
+@media screen and (max-width: 850px) {
+    .navbarItems {
+        z-index: 99;
+    }
+    .navItems {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        align-items: stretch;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        transition: 0.3s ease-in-out;
+        border-radius: 13px;
+    }
+
+    .navItems.active {
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navLink{
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+    }
+
+    .navLink:hover {
+        background-color: #01959a;
+        transition: none;
+    }
+
+    
+    button {
+        display: none;
+    }
+
+    .signUp {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: auto;
+        border-radius: 4px;
+        width: 80%;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        background-color: #01959a;
+    }
+
+    .signUp:hover {
+        background-color: #151516;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .menuIcon i {
+        font-size: 1.2rem;
+        color: #222;
+    }
 }
