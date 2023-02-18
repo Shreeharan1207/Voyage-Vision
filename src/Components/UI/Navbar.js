@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import MenuItems from './MenuItems'
 
@@ -10,10 +10,13 @@ const Navbar = () => {
     const iconChangeHandler = () => {
         setChangeIcon(!changeIcon);
     }
+    const hideMenu = () => {
+        setChangeIcon(false)
+    }
     return (
         <header>
             <nav className={classes.navbarItems}>
-                <h1 className={classes.navbarLogo}>Travel</h1>
+                <h6 className={classes.navbarLogo}>Voyage Vision</h6>
 
                 <div className={classes.menuIcon} onClick={iconChangeHandler}>
                     <i className={changeIcon ? "fas fa-times" : "fas fa-bars"}></i>
@@ -23,10 +26,12 @@ const Navbar = () => {
                     {MenuItems.map((item, index) => {
                         return (
                             <li key={index}>
-                                <Link className={classes[item.cName]} to={item.url}>
+                                <NavLink className= {classes[item.cName]}
+                                     to={item.url} 
+                                     onClick={hideMenu}>
                                     <i className={item.icon}></i>
                                     {item.title}
-                                </Link>
+                                </NavLink>
                             </li>
                         )
                     }
