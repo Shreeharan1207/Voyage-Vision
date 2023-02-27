@@ -1,13 +1,23 @@
 .destination {
     margin: 4rem 6rem;
+    text-align: center;
+    color: #222 ;
 }
 
 .destination h1 {
     font-size: 3rem;
 }
 
-.desc {
+.firstDesc {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+}
+
+.firstDescReverse {
+    display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     margin-top: 4.5rem;
@@ -50,7 +60,13 @@
         margin: 4rem 6rem;
     }
 
-    .desc {
+    .firstDesc {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 2.5rem;
+    }
+
+    .firstDescReverse {
         display: flex;
         flex-direction: column-reverse;
         margin-top: 2.5rem;
