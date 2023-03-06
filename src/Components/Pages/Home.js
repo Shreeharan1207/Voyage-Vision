@@ -18,7 +18,7 @@ const Home = () => {
         url="/"
         btnClass={classes.show}
       />
-      <Destination/>
+      <Destination />
     </>
   )
 }

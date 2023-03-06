@@ -36,6 +36,7 @@ const Destination = () => {
               img1 = {Valcano1} 
               img2 = {Valcano2}
             />
+            
         </div>
     )
 }
