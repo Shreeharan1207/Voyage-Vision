@@ -6,6 +6,7 @@ import heroImg from '../../Assets/2.jpg'
 import classes from '../Hero.module.css'
 import Destination from '../Destination'
 import Trip from '../Trip'
+import Footer from '../Footer'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       />
       <Destination />
       <Trip/>
+      <Footer/>
     </>
   )
 }
