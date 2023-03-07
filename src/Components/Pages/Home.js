@@ -5,6 +5,7 @@ import Hero from '../Hero'
 import heroImg from '../../Assets/2.jpg'
 import classes from '../Hero.module.css'
 import Destination from '../Destination'
+import Trip from '../Trip'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         btnClass={classes.show}
       />
       <Destination />
+      <Trip/>
     </>
   )
 }
