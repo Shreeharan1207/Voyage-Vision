@@ -2,8 +2,10 @@ import React from 'react'
 
 
 import classes from './Destination.module.css'
-import Valcano1 from '../Assets/5.jpg'
-import Valcano2 from '../Assets/6.jpg'
+import maldive1 from '../Assets/maldive1.jpg'
+import maldive2 from '../Assets/maldive3.jpg'
+import paris1 from '../Assets/7.jpg'
+import paris2 from '../Assets/8.jpg'
 import DestinationData from './DestinationData'
 
 const Destination = () => {
@@ -14,27 +16,25 @@ const Destination = () => {
             </h1>
             <p>Tours give you the opportunity to see a lot, within a time frame</p>
             <DestinationData className={classes.firstDesc}
-              heading = "Taal Volcano, Batangas"
-              text = "One of the most iconic views in Luzon, Mt. Taal boasts a volcano
-              inside a lake inside an Island. If you fancy a closer look, the hike up to 
-              the crater is a mere 45 minutes and is easy enough for beginners. Guides
-              will assist you most of the way, and you'll see the peculiar environment 
-              found on an active volcano, including volcanic rocks and steam vents. The 
-              hike can be dusty and hot so plan for on early morning trip, and then unwind 
-              with some bulalo before heading back home!"
-              img1 = {Valcano1} 
-              img2 = {Valcano2}
+              heading = "Maldives"
+              text = "Maldives has the most beautiful tropical islands in the world. It is best 
+              known for its serene natural environment that includes the azure blue ocean, clean air, 
+              and white sandy beaches. It is also very much famous 
+              for its water based adventure sports like swimming, scuba diving, fishing, water skiing, 
+              kiteboarding, snorkelling, and windsurfing. Luxury resorts and water villas also make  
+              Maldives a hit destination amongst travellers."
+              img1 = {maldive1} 
+              img2 = {maldive2}
             />
             <DestinationData className={classes.firstDescReverse}
-              heading = "Mt. Daguldaul, Batangas"
-              text = "If you're looking for a hike that's a little more challenging but still 
-              good for a beginner mountaineer, check out ML Daguldul in San Juan, Batangas. You'll 
-              start your hike from the beach and pass through tropical forest, different rock formations, 
-              and small streams. There's a small store halfway up the trail where you can take a break and 
-              drink buka juice, and though the summit itself may not have the best view, the breeze is fantastic.
-              Once you've made it back down, head straight to the beach for a refreshing. Well-deserved swim"
-              img1 = {Valcano1} 
-              img2 = {Valcano2}
+              heading = "Paris, France"
+              text = "Paris is one of the most beautiful cities in the world. It is known worldwide 
+              for the Louvre Museum, Notre-Dame cathedral, and the Eiffel tower. It has a reputation 
+              of being a romantic and cultural city. The city is also known for its high-quality gastronomy 
+              and the terraces of its cafés. French food is impossible to resist in the city of light. Famous 
+              foods in Paris include Croissants, Steak-Frites, Macarons and Fromage"
+              img1 = {paris1} 
+              img2 = {paris2}
             />
             
         </div>
