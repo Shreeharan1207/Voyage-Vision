@@ -26,9 +26,9 @@ const Navbar = () => {
                     {MenuItems.map((item, index) => {
                         return (
                             <li key={index}>
-                                <NavLink className= {classes[item.cName]}
-                                     to={item.url} 
-                                     onClick={hideMenu}>
+                                <NavLink className={classes[item.cName]}
+                                    to={item.url}
+                                    onClick={hideMenu}>
                                     <i className={item.icon}></i>
                                     {item.title}
                                 </NavLink>
@@ -36,7 +36,7 @@ const Navbar = () => {
                         )
                     }
                     )}
-                    <button>Sign Up</button>
+                    <button className='btn'> <NavLink className={classes.btnLink} to="/signup"> Sign Up </NavLink> </button>
                 </ul>
             </nav>
         </header>

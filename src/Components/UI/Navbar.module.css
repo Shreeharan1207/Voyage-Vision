@@ -83,8 +83,16 @@ button {
     transition: 0.2s ease-in-out;
 }
 
+button .btnLink {
+    text-decoration: none;
+    color: #222;
+}
+
 button:hover {
     background-color: #151516;
+}
+
+button:hover .btnLink{
     color: #fff;
 }
 

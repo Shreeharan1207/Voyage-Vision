@@ -31,6 +31,10 @@
     display: inline;
 }
 
+.formDiv button:hover {
+    color: #fff;
+}
+
 @media screen and (max-width:850px){
     .formDiv {
         margin: 4rem 2rem;
