@@ -10,7 +10,7 @@ const SignUpPage = () => {
         const specialCharRegex = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/;
         const numberRegex = /[0-9]/;
 
-        if (password.length >= 8 && uppercaseRegex.test(password)  && numberRegex.test(password)) {
+        if (password.length >= 8 && uppercaseRegex.test(password)  && numberRegex.test(password) && specialCharRegex.test(password)) {
             return true;
         }else {
             return false;
