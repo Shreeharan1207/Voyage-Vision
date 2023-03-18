@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import classes from './Footer.module.css'
 
@@ -11,50 +12,50 @@ const Footer = () => {
                     <p>Choose your favourite destination</p>
                 </div>
                 <div>
-                    <a href='/'>
+                    <NavLink to='/'>
                         <i className="fa-brands fa-facebook-square"></i>
-                    </a>
-                    <a href='/'>
+                    </NavLink>
+                    <NavLink to='/'>
                         <i className="fa-brands fa-instagram-square"></i>
-                    </a>
-                    <a href='/'>
+                    </NavLink>
+                    <NavLink to='/'>
                         <i className="fa-brands fa-youtube-square"></i>
-                    </a>    
-                    <a href='/'>
+                    </NavLink>    
+                    <NavLink to='/'>
                         <i className="fa-brands fa-twitter-square"></i>
-                    </a>
+                    </NavLink>
                 </div>
             </div>
 
             <div className={classes.bottom}>
                 <div>
                     <h4>Project</h4>
-                    <a href='/'>Changelog</a>
-                    <a href='/'>Status</a>
-                    <a href='/'>License</a>
-                    <a href='/'>All Versions</a>
+                    <NavLink to='/'>Changelog</NavLink>
+                    <NavLink to='/'>Status</NavLink>
+                    <NavLink to='/'>License</NavLink>
+                    <NavLink to='/'>All Versions</NavLink>
                 </div>
 
                 <div>
                     <h4>Community</h4>
-                    <a href='/'>GitHub</a>
-                    <a href='/'>Issues</a>
-                    <a href='/'>Project</a>
-                    <a href='/'>Twitter</a>
+                    <NavLink to='/'>GitHub</NavLink>
+                    <NavLink to='/'>Issues</NavLink>
+                    <NavLink to='/'>Project</NavLink>
+                    <NavLink to='/'>Twitter</NavLink>
                 </div>
 
                 <div>
                     <h4>Help</h4>
-                    <a href='/'>Support</a>
-                    <a href='/'>Troubleshooting</a>
-                    <a href='/'>Contact Us</a>
+                    <NavLink to='/'>Support</NavLink>
+                    <NavLink to='/'>Troubleshooting</NavLink>
+                    <NavLink to='/contact'>Contact Us</NavLink>
                 </div>
 
                 <div>
                     <h4>Others</h4>
-                    <a href='/'>Terms of Services</a>
-                    <a href='/'>Privacy Policy</a>
-                    <a href='/'>License</a>
+                    <NavLink to='/'>Terms of Services</NavLink>
+                    <NavLink to='/'>Privacy Policy</NavLink>
+                    <NavLink to='/'>License</NavLink>
                 </div>
                 
             </div>

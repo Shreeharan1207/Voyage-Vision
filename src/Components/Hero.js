@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import classes from './Hero.module.css'
 
 const Hero = (props) => {
@@ -11,11 +12,11 @@ const Hero = (props) => {
                 <div className={classes.heroText}>
                     <h1>{props.title}</h1>
                     <p>{props.text}</p>
-                    <a
+                    <NavLink
                         href={props.url}
                         className={`${props.btnClass}`}>
                         {props.buttonText}
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         </>

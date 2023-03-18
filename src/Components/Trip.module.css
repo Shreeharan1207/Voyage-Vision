@@ -34,6 +34,7 @@
     width: 100%;
     transition: 0.3s ease-in-out;
     border-radius: 7px;
+    object-fit: cover;
 }
 
 .tImage:hover img {
@@ -57,4 +58,9 @@
         width: 100%;
         margin-bottom: 1.5rem;
     }
+
+    .tImage img {
+        object-fit: cover;
+    }
+
 }
