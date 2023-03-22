@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Hero from '../Hero'
-import aboutImg from '../../Assets/1.jpg'
-import classes from '../Hero.module.css'
-import Footer from '../Footer'
-import AboutUs from '../AboutUs'
+import Hero from '../Components/Hero'
+import aboutImg from '../Assets/1.jpg'
+import classes from '../Components/Hero.module.css'
+import Footer from '../Components/Footer'
+import AboutUs from '../Components/AboutUs'
 
 const About = () => {
   return (

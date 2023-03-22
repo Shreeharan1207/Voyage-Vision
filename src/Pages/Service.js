@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Hero from '../Hero'
-import serviceImg from '../../Assets/1.jpg'
-import classes from '../Hero.module.css'
-import Footer from '../Footer'
-import Trip from '../Trip'
+import Hero from '../Components/Hero'
+import serviceImg from '../Assets/1.jpg'
+import classes from '../Components/Hero.module.css'
+import Footer from '../Components/Footer'
+import Trip from '../Components/Trip'
 
 const Service = () => {
   return (

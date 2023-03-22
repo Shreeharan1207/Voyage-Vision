@@ -1,12 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./Components/Pages/About";
 
-import RootLayout from "./Components/Pages/RootLayout";
-import Home from "./Components/Pages/Home";
-import Service from "./Components/Pages/Service";
-import Contact from "./Components/Pages/Contact";
-import ErrorPage from "./Components/ErrorPage";
-import SignUp from "./Components/Pages/SignUp";
+
+import RootLayout from "./Pages/RootLayout";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Service from "./Pages/Service";
+import Contact from "./Pages/Contact";
+import SignUp from "./Pages/SignUp";
 
 
 const routers = createBrowserRouter([
@@ -20,7 +20,6 @@ const routers = createBrowserRouter([
       { path: 'contact', element: <Contact /> },
       { path: 'signup', element: <SignUp /> }
     ],
-    errorElement: <ErrorPage/>,
   }
 ]);
 

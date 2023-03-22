@@ -21,6 +21,7 @@ const Trip = () => {
                 shopping malls, and entertainment venues, 
                 as well as unique cultural experiences like 
                 camel rides and desert safaris."
+          location = "Tourist place in dubai"    
         />
 
 
@@ -32,6 +33,7 @@ const Trip = () => {
           landmarks in the world, showcasing the Mughal architecture 
           and art. It is a must-visit destination for anyone interested 
           in history, architecture, and culture."
+          location = "Tourist place in agra"
         />
 
         <TripData
@@ -41,6 +43,7 @@ const Trip = () => {
                 are just two of the many reasons to visit 
                 Sydney, which also boasts stunning beaches, 
                 a vibrant arts scene, and a laid-back Aussie vibe."
+          location= "Tourist place in Sydney"
         />
       </div>
     </div>

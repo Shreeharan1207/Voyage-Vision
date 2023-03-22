@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-import Hero from '../Hero'
-import heroImg from '../../Assets/2.jpg'
-import classes from '../Hero.module.css'
-import Destination from '../Destination'
-import Trip from '../Trip'
-import Footer from '../Footer'
+import Hero from '../Components/Hero'
+import heroImg from '../Assets/2.jpg'
+import classes from '../Components/Hero.module.css'
+import Destination from '../Components/Destination'
+import Trip from '../Components/Trip'
+import Footer from '../Components/Footer'
 
 const Home = () => {
   return (

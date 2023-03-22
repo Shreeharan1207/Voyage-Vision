@@ -1,7 +1,7 @@
 import React from 'react'
 
-import SignUpPage from '../SignUpPage'
-import Footer from '../Footer'
+import SignUpPage from '../Components/SignUpPage'
+import Footer from '../Components/Footer'
 import NavBar from '../UI/Navbar'
 
 const SignUp = () => {

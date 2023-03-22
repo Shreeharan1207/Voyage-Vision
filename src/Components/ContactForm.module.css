@@ -35,6 +35,18 @@
     color: #fff;
 }
 
+.formDiv .success {
+    margin: 10px auto;
+    width: 40%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.success i {
+    padding: 0 5px;
+}
+
 @media screen and (max-width:850px){
     .formDiv {
         margin: 4rem 2rem;

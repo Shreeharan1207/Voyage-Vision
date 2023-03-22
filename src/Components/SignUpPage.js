@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import useInput from '../hooks/use-input';
 import { getData, saveData } from '../store/fetchData';
-// import { saveData} from '../store/fetchData';
+import Modal from '../UI/Modal';
 
 import classes from './SignUpForm.module.css'
 
