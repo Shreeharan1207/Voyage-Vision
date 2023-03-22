@@ -78,7 +78,7 @@ const SignUpPage = () => {
                 email : enteredEmail,
                 password : enteredcpwd
             }
-            saveData(details);
+            saveData(details, /*here pass your database url for storing user details*/);
             setSuccessModal(true);
         }
         
@@ -94,12 +94,10 @@ const SignUpPage = () => {
     }
     const inputClass = userNameHasError ? `${classes.formInvalid}` : `${classes.formControl}`;
 
-    // const icons = errorModal ?  : null;
-
     return (
         <div>
         {errorModal && <Modal icon= "fa-regular fa-circle-xmark" heading="Ooops!" text="Entered email id is already exists" onClear={modalHandler}/>}
-        {successModal && <Modal icon= "fa-regular fa-circle-check" heading="Logged in" text="Account has been created successfully!" onClear={modalHandler}/>}
+        {successModal && <Modal icon= "fa-regular fa-circle-check" heading="Successful" text="Account has been created successfully!" onClear={modalHandler}/>}
         <div className={classes.formDiv} >
             <h1>Sign up</h1>
             <form onSubmit={validateData}>

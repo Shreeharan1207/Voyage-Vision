@@ -1,5 +1,5 @@
-async function saveData(details) {
-    const response = await fetch('https://voyage-vision-57d39-default-rtdb.firebaseio.com/user-details.json',
+async function saveData(details , url) {
+    const response = await fetch(url,
         {
             method: 'POST',
             body: JSON.stringify(details),
@@ -14,7 +14,7 @@ async function saveData(details) {
 
 async function getData(enteredEmail) {
     try {
-        const response = await fetch('https://voyage-vision-57d39-default-rtdb.firebaseio.com/user-details.json');
+        const response = await fetch(/*here pass your database url to fetch data from user-details*/);
         if (!response.ok) {
             throw new Error(Error.message);
         }
