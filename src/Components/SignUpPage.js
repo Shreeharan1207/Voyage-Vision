@@ -1,18 +1,22 @@
-import React from 'react'
-import useInput from './hooks/use-input';
+import React, { useState } from 'react'
+import useInput from '../hooks/use-input';
+import { getData, saveData } from '../store/fetchData';
+// import { saveData} from '../store/fetchData';
 
 import classes from './SignUpForm.module.css'
 
 const SignUpPage = () => {
+
+    const [errorModal, setErrorModal] = useState(false);
 
     const validatePwd = (password) => {
         const uppercaseRegex = /[A-Z]/;
         const specialCharRegex = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/;
         const numberRegex = /[0-9]/;
 
-        if (password.length >= 8 && uppercaseRegex.test(password)  && numberRegex.test(password) && specialCharRegex.test(password)) {
+        if (password.length >= 8 && uppercaseRegex.test(password) && numberRegex.test(password) && specialCharRegex.test(password)) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -59,10 +63,23 @@ const SignUpPage = () => {
         isFormValid = true;
     }
 
-    const validateData = (event) => {
+    async function validateData(event) {
         event.preventDefault();
-        alert("Submitted")
 
+        const emailExists = await getData(enteredEmail);
+        if(emailExists){
+            console.log("Email id already exists");
+            return;
+        }else{
+            const details = {
+                name : enteredUsername,
+                email : enteredEmail,
+                password : enteredcpwd
+            }
+            saveData(details);
+            
+        }
+        
         resetUserName();
         resetEmail();
         resetPwd();
@@ -73,6 +90,7 @@ const SignUpPage = () => {
 
     return (
         <div className={classes.formDiv} >
+           {errorModal && <Modal/>}
             <h1>Sign up</h1>
             <form onSubmit={validateData}>
                 <div className={inputClass}>
@@ -82,7 +100,7 @@ const SignUpPage = () => {
                         onChange={usernameChangeHandler}
                         onBlur={usernameBlurHandler}
                         value={enteredUsername} />
-                    {userNameHasError && <p className={classes.errorText}>Enter valid Username</p>}
+                    {userNameHasError && <p className={classes.errorText}>Enter valid username</p>}
                 </div>
 
                 <div className={inputClass}>
@@ -92,7 +110,7 @@ const SignUpPage = () => {
                         onChange={emailChangeHandler}
                         onBlur={emailBlurHandler}
                         value={enteredEmail} />
-                    {emailHasError && <p className={classes.errorText}>Enter valid Username</p>}
+                    {emailHasError && <p className={classes.errorText}>Enter valid email id</p>}
                 </div>
 
                 <div className={inputClass}>
@@ -103,9 +121,9 @@ const SignUpPage = () => {
                         onBlur={pwdBlurHandler}
                         value={enteredpwd} />
                     {pwdHasError && <ul className={classes.errorText}>
-                        <li>Character length Should be greater than 8</li>
-                        <li>Should contains Number</li>
-                        <li>Atleast one upperCase must</li>
+                        <li>Character length should be greater than 8</li>
+                        <li>Should contains number</li>
+                        <li>Atleast one uppercase must</li>
                         <li>Atleast one special character must</li>
                     </ul>}
                 </div>
