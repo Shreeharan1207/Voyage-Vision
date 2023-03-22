@@ -8,6 +8,7 @@ import classes from './SignUpForm.module.css'
 const SignUpPage = () => {
 
     const [errorModal, setErrorModal] = useState(false);
+    const [successModal, setSuccessModal] = useState(false);
 
     const validatePwd = (password) => {
         const uppercaseRegex = /[A-Z]/;
@@ -69,6 +70,7 @@ const SignUpPage = () => {
         const emailExists = await getData(enteredEmail);
         if(emailExists){
             console.log("Email id already exists");
+            setErrorModal(true);
             return;
         }else{
             const details = {
@@ -77,7 +79,7 @@ const SignUpPage = () => {
                 password : enteredcpwd
             }
             saveData(details);
-            
+            setSuccessModal(true);
         }
         
         resetUserName();
@@ -86,11 +88,19 @@ const SignUpPage = () => {
         resetCpwd();
     }
 
+    const modalHandler = () => {
+        setErrorModal(false);
+        setSuccessModal(false);
+    }
     const inputClass = userNameHasError ? `${classes.formInvalid}` : `${classes.formControl}`;
 
+    // const icons = errorModal ?  : null;
+
     return (
+        <div>
+        {errorModal && <Modal icon= "fa-regular fa-circle-xmark" heading="Ooops!" text="Entered email id is already exists" onClear={modalHandler}/>}
+        {successModal && <Modal icon= "fa-regular fa-circle-check" heading="Logged in" text="Account has been created successfully!" onClear={modalHandler}/>}
         <div className={classes.formDiv} >
-           {errorModal && <Modal/>}
             <h1>Sign up</h1>
             <form onSubmit={validateData}>
                 <div className={inputClass}>
@@ -142,6 +152,7 @@ const SignUpPage = () => {
                 <div className={classes.fbtn}><button disabled={!isFormValid}>Sign Up</button></div>
             </form>
         </div>
+    </div>   
     )
 }
 
