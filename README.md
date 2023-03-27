@@ -6,7 +6,7 @@ Open command prompt in the directory where you saved your files.
 
 Type
 ### `npm init`
-To initaialize the node modules.
+To initialize the node modules.
 
 
 In the project directory, you can run:
